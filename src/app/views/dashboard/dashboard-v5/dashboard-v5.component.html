@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <div class="card-title">How is our total  distributed geographically?</div>
                     <div *ngFor="let country of chartCountryTotal" class="progress mb-2">
-                        <div class="progress-bar" role="progressbar" [ngStyle]="{'width': country.totalPercentaje}" aria-valuenow="{{country.totalPercentaje}}" aria-valuemin="0" aria-valuemax="100">{{country.countryName}} {{country.totalPercentaje}}</div>
+                        <span class="name mr-2">{{country.countryName}}</span> <div class="progress-bar" role="progressbar" [ngStyle]="{'width': country.totalPercentaje + '%'}" aria-valuenow="{{country.totalPercentaje}}" aria-valuemin="0" aria-valuemax="100">{{country.totalPercentaje}}M</div>
                       </div>
                     <!-- <div echarts [options]="salesChartBar" [autoResize]="true" style="height: 300px;"></div> -->
                 </div>

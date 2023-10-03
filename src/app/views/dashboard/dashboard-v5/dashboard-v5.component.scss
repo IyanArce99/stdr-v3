@@ -1,0 +1,19 @@
+.progress {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    background: white;
+}
+
+.progress-bar {
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    left: 100px;
+}
+
+.name {
+    padding: 10px;
+}

@@ -21,33 +21,66 @@ export class DashboardV5Component {
 	ngOnInit() {
         this.chartCountryTotal = [{
             countryName: 'USA',
-            totalPercentaje: '95%'
+            totalPercentaje: '100',
         },
         {
             countryName: 'Japan',
-            totalPercentaje: '65%'
+            totalPercentaje: '65'
         },
         {
             countryName: 'China',
-            totalPercentaje: '60%'
+            totalPercentaje: '57'
         },
         {
             countryName: 'Canada',
-            totalPercentaje: '58%'
+            totalPercentaje: '55'
+        },
+        {
+            countryName: 'France',
+            totalPercentaje: '52'
+        },
+        {
+            countryName: 'UK',
+            totalPercentaje: '50'
+        },
+        {
+            countryName: 'Germany',
+            totalPercentaje: '47'
+        },
+        {
+            countryName: 'South Korea',
+            totalPercentaje: '36'
+        },
+        {
+            countryName: 'Malasya',
+            totalPercentaje: '36'
         },
         {
             countryName: 'Finland',
-            totalPercentaje: '45%'
+            totalPercentaje: '34'
         },
         {
             countryName: 'Italy',
-            totalPercentaje: '40%'
+            totalPercentaje: '34'
         },
         {
-            countryName: 'Brasil',
-            totalPercentaje: '30%'
+            countryName: 'Netherlands',
+            totalPercentaje: '33'
+        },
+        {
+            countryName: 'Mónaco',
+            totalPercentaje: '30'
+        },
+        {
+            countryName: 'Belgium',
+            totalPercentaje: '21'
+        },
+        {
+            countryName: 'Denmark',
+            totalPercentaje: '11'
         },
     ];
+    
 		this.chartLineOption1 = {
 			...echartStyles.lineFullWidth, ...{
 				series: [{
@@ -251,5 +284,6 @@ export class DashboardV5Component {
             ]
         };
 	}
+
 
 }
