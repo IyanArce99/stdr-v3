@@ -13,6 +13,13 @@ import { DashboardV3Component } from './dashboard-v3/dashboard-v3.component';
 import { DashboardV4Component } from './dashboard-v4/dashboard-v4.component';
 import { DashboardV5Component } from './dashboard-v5/dashboard-v5.component';
 
+import { PointStylingChartComponent } from 'src/app/point-styling-chart/point-styling-chart.component';
+
+import { PolarAreaChartComponent } from 'src/app/polar-area-chart/polar-area-chart.component';
+
+import { DoughnutChartsComponent } from 'src/app/doughnut-charts/doughnut-charts.component';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -22,8 +29,13 @@ import { DashboardV5Component } from './dashboard-v5/dashboard-v5.component';
     }),
     NgxDatatableModule,
     NgbModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+     
   ],
-  declarations: [DashboadDefaultComponent, DashboardV2Component, DashboardV3Component, DashboardV4Component, DashboardV5Component]
+  declarations: [DashboadDefaultComponent, DashboardV2Component, DashboardV3Component, DashboardV4Component, DashboardV5Component,
+    PointStylingChartComponent ,PolarAreaChartComponent,DoughnutChartsComponent ]
 })
+
+
+
 export class DashboardModule { }

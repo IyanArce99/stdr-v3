@@ -31,21 +31,38 @@
         </div>
     </div>
 
+
+    
+
+
+   
+
+
     <div class="row">
         <div class="col-lg-6 col-md-12">
 
-            <div class="row">
-                <div class="col-lg-6 col-md-12">
-                    <div class="card card-chart-bottom o-hidden mb-4">
+          
+         <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-body">
+    
+            <app-point-styling-chart></app-point-styling-chart>
+            </div>
+                </div>
+        </div>
+           <!--      <div class="col-lg-6 col-md-12">
+                    <div >
                         <div class="card-body">
                             <div class="text-muted">Last Month Sales</div>
                             <p class="mb-4 text-primary text-24">$40250</p>
                         </div>
-                        <div echarts [options]="chartLineOption1" [autoResize]="true" style="height: 260px;"></div>
+                       
+                      <div echarts [options]="chartLineOption1" [autoResize]="true" style="height: 260px;"></div>
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-12">
+              <div class="col-lg-6 col-md-12">
                     <div class="card card-chart-bottom o-hidden mb-4">
                         <div class="card-body">
                             <div class="text-muted">Last Week Sales</div>
@@ -53,30 +70,40 @@
                         </div>
                         <div echarts [options]="chartLineOption2" [autoResize]="true" style="height: 260px;"></div>
                     </div>
-                </div>
-            </div>
-
+                </div>--> 
+           
+        </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card mb-4">
+                    <!-- <div class="card mb-4">
                         <div class="card-body">
                             <h6 class="mb-2 text-muted">iPhone x Stock</h6>
                             <p class="mb-1 text-24 font-weight-light text-title">50%</p>
                             <p class="mb-1">
+
+                                <app-point-styling-chart></app-point-styling-chart>
                                 <ngb-progressbar type="success" [value]="50" height="4px"></ngb-progressbar>
-                            </p>
+                                </p>
                             <small class="text-muted">Most sold in last 3 days</small>
+
+                          
                         </div>
-                    </div>
+                                
+                            
+                    </div> -->
 
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h6 class="mb-2 text-muted">iPhone 6 Stock</h6>
-                            <p class="mb-1 text-24 font-weight-light text-title">90%</p>
+                            <h6 class="mb-2 text-muted"></h6>
+                            <p class="mb-1 text-24 font-weight-light text-title"></p>
                             <p class="mb-1">
-                                <ngb-progressbar type="danger" [value]="90" height="4px"></ngb-progressbar>
-                            </p>
+
+                                <app-doughnut-charts></app-doughnut-charts>
+                             <!--   <ngb-progressbar type="danger" [value]="90" height="4px"></ngb-progressbar>
+                                 </p>
                             <small class="text-muted">Most sold in last 7 days</small>
+                            -->
+                           
                         </div>
                     </div>
 
@@ -90,7 +117,9 @@
 
             <div class="card mb-4">
                 <div class="card-body">
-                    <div class="card-title">Top Selling Products</div>
+
+                    <app-polar-area-chart></app-polar-area-chart>
+                  <!--  <div class="card-title">Top Selling Products</div>
                     <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-3">
                         <img class="avatar-lg mb-3 mb-sm-0 rounded me-sm-3" src="./assets/images/products/headphone-4.jpg" alt="">
                         <div class="flex-grow-1">
@@ -187,7 +216,7 @@
                             <h5 class="m-0">32165</h5>
                         </div>
                     </div>
-
+-->
                 </div>
             </div>
 
