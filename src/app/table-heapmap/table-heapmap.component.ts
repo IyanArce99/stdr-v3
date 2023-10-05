@@ -21,8 +21,7 @@ export class TableHeapmapComponent  implements OnInit{
           {
             name: 'Child 1',
             value: 10,
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
+      
           },
           {
             name: 'Child 2',
@@ -49,8 +48,8 @@ export class TableHeapmapComponent  implements OnInit{
       };
       
 
-      const width = 600;
-      const height = 400;
+      const width = 500;
+      const height = 500;
     
       const treemap = d3.treemap()
         .size([width, height])
@@ -64,10 +63,9 @@ export class TableHeapmapComponent  implements OnInit{
       const svg = d3.select('#treemap-container')
         .append('svg')
         .attr('width', width)
-        .attr("style", "max-width: 100%; height: auto; font: 10px sans-serif; background-color:white")
+       // .attr("style", "max-width: 100%; height: auto; font: 10px sans-serif; background-color:white")
         .attr('height', height);
     
-        svg.style('background-color', 'white');
 
       // Supongamos que 'data' es tu conjunto de datos en formato de jerarquía (como un objeto JSON).
       // Si no tienes un conjunto de datos, puedes crear uno para probar.
