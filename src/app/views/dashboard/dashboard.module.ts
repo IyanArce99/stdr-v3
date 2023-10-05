@@ -19,6 +19,10 @@ import { PolarAreaChartComponent } from 'src/app/polar-area-chart/polar-area-cha
 
 import { DoughnutChartsComponent } from 'src/app/doughnut-charts/doughnut-charts.component';
 
+import { LineChartStackedComponent } from 'src/app/line-chart-stacked/line-chart-stacked.component';
+
+import { StackedBarChartComponent } from 'src/app/stacked-bar-chart/stacked-bar-chart.component';
+ import { TableHeapmapComponent } from 'src/app/table-heapmap/table-heapmap.component';
 
 @NgModule({
   imports: [
@@ -33,7 +37,7 @@ import { DoughnutChartsComponent } from 'src/app/doughnut-charts/doughnut-charts
      
   ],
   declarations: [DashboadDefaultComponent, DashboardV2Component, DashboardV3Component, DashboardV4Component, DashboardV5Component,
-    PointStylingChartComponent ,PolarAreaChartComponent,DoughnutChartsComponent ]
+    PointStylingChartComponent ,PolarAreaChartComponent,DoughnutChartsComponent,LineChartStackedComponent,StackedBarChartComponent,TableHeapmapComponent ]
 })
 
 

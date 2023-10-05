@@ -51,26 +51,19 @@
             </div>
                 </div>
         </div>
-           <!--      <div class="col-lg-6 col-md-12">
+                 <div class="col-md-12">
                     <div >
                         <div class="card-body">
-                            <div class="text-muted">Last Month Sales</div>
-                            <p class="mb-4 text-primary text-24">$40250</p>
+                        
+
+                            <app-polar-area-chart></app-polar-area-chart>
                         </div>
                        
-                      <div echarts [options]="chartLineOption1" [autoResize]="true" style="height: 260px;"></div>
+                       
                     </div>
                 </div>
 
-              <div class="col-lg-6 col-md-12">
-                    <div class="card card-chart-bottom o-hidden mb-4">
-                        <div class="card-body">
-                            <div class="text-muted">Last Week Sales</div>
-                            <p class="mb-4 text-warning text-24">$10250</p>
-                        </div>
-                        <div echarts [options]="chartLineOption2" [autoResize]="true" style="height: 260px;"></div>
-                    </div>
-                </div>--> 
+              
            
         </div>
             <div class="row">
@@ -118,7 +111,7 @@
             <div class="card mb-4">
                 <div class="card-body">
 
-                    <app-polar-area-chart></app-polar-area-chart>
+                    
                   <!--  <div class="card-title">Top Selling Products</div>
                     <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-3">
                         <img class="avatar-lg mb-3 mb-sm-0 rounded me-sm-3" src="./assets/images/products/headphone-4.jpg" alt="">
@@ -165,71 +158,37 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
-            <div class="card mb-4">
-                <div class="card-body p-0">
-                    <div class="card-title border-bottom d-flex align-items-center m-0 p-3">
-                        <span>User activity</span>
-                        <span class="flex-grow-1"></span>
-                        <span class="badge badge-pill badge-warning">Updated daily</span>
-                    </div>
-                    <div class="d-flex border-bottom justify-content-between p-3">
-                        <div class="flex-grow-1">
-                            <span class="text-small text-muted">Pages / Visit</span>
-                            <h5 class="m-0">2065</h5>
-                        </div>
-                        <div class="flex-grow-1">
-                            <span class="text-small text-muted">New user</span>
-                            <h5 class="m-0">465</h5>
-                        </div>
-                        <div class="flex-grow-1">
-                            <span class="text-small text-muted">Last week</span>
-                            <h5 class="m-0">23456</h5>
-                        </div>
-                    </div>
-                    <div class="d-flex border-bottom justify-content-between p-3">
-                        <div class="flex-grow-1">
-                            <span class="text-small text-muted">Pages / Visit</span>
-                            <h5 class="m-0">1829</h5>
-                        </div>
-                        <div class="flex-grow-1">
-                            <span class="text-small text-muted">New user</span>
-                            <h5 class="m-0">735</h5>
-                        </div>
-                        <div class="flex-grow-1">
-                            <span class="text-small text-muted">Last week</span>
-                            <h5 class="m-0">92565</h5>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between p-3">
-                        <div class="flex-grow-1">
-                            <span class="text-small text-muted">Pages / Visit</span>
-                            <h5 class="m-0">3165</h5>
-                        </div>
-                        <div class="flex-grow-1">
-                            <span class="text-small text-muted">New user</span>
-                            <h5 class="m-0">165</h5>
-                        </div>
-                        <div class="flex-grow-1">
-                            <span class="text-small text-muted">Last week</span>
-                            <h5 class="m-0">32165</h5>
-                        </div>
-                    </div>
--->
+           
                 </div>
-            </div>
-
         </div>
+
+
+
+        <div class="card mb-4">
+            <div class="card-body p-0">
+
+                <app-line-chart-stacked></app-line-chart-stacked>
+               
+               
+        
+
+
+            </div>
+        </div>
+
 
         <div class="col-md-12">
             <div class="card mb-4">
                 <div class="card-body p-0">
-                    <h5 class="card-title m-0 p-3">Last 20 Days Sales</h5>
-                    <div echarts [options]="chartLineOption3"></div>
+                    <app-stacked-bar-chart></app-stacked-bar-chart>
+
                 </div>
             </div>
         </div>
+
+        <app-table-heapmap></app-table-heapmap>
 
     </div>
 </div>
