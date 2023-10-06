@@ -10,22 +10,34 @@
     <div class="separator-breadcrumb border-top"></div>
 
     <div class="row">
-        <div class="col-lg-8 col-md-12">
+        <div class="col-lg-9 col-md-12">
             <div class="card mb-4">
                 <div class="card-body">
                     <div class="card-title">How is our total  distributed geographically?</div>
                     <div *ngFor="let country of chartCountryTotal" class="progress mb-2">
-                        <span class="name mr-2">{{country.countryName}}</span> <div class="progress-bar" role="progressbar" [ngStyle]="{'width': country.totalPercentaje + '%'}" aria-valuenow="{{country.totalPercentaje}}" aria-valuemin="0" aria-valuemax="100">{{country.totalPercentaje}}M</div>
+                        <span class="name mr-2">{{country.countryName}}</span>
+                        <div class="progress-bar" role="progressbar" [ngStyle]="{'width': country.totalPercentaje + '%'}" aria-valuenow="{{country.totalPercentaje}}" aria-valuemin="0" aria-valuemax="100">{{country.totalPercentaje}}M
+                            <div class="progress-bar-old" role="progressbar" [ngStyle]="{'width': country.lastTwoMonths + '%'}" aria-valuenow="{{country.lastTwoMonths}}" aria-valuemin="0" aria-valuemax="100">{{country.lastTwoMonths}}M
+                                <div class="progress-bar-old-x2" role="progressbar" [ngStyle]="{'width': country.overTwoMonths + '%'}" aria-valuenow="{{country.overTwoMonths}}" aria-valuemin="0" aria-valuemax="100">{{country.overTwoMonths}}M</div>
+                            </div>
+                        </div>
                       </div>
                     <!-- <div echarts [options]="salesChartBar" [autoResize]="true" style="height: 300px;"></div> -->
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-sm-12">
-            <div class="card mb-4">
+        <div class="col-lg-3 col-sm-12">
+            <div class="card mb-4 center-chart">
                 <div class="card-body">
                     <div class="card-title">Sales by Countries</div>
-                    <div echarts [options]="salesChartPie" [autoResize]="true" style="height: 300px;"></div>
+                    <app-doughnut-charts></app-doughnut-charts>
+                </div>
+            </div>
+
+            <div class="card mb-4 center-chart mt-2-2">
+                <div class="card-body">
+                    <div class="card-title">Sales by Countries</div>
+                    <app-polar-area-chart></app-polar-area-chart>
                 </div>
             </div>
         </div>
