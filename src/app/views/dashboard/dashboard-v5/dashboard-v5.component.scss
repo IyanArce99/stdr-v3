@@ -1,5 +1,5 @@
 .progress {
-    padding: 10px 0px;
+    padding: 16px 0px;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -12,8 +12,37 @@
     text-align: left;
     position: absolute;
     left: 100px;
+    background-color: #02B8AB;
+    max-width: -webkit-fill-available;
+}
+
+.progress-bar-old {
+    background: #374649;
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    right: 0px;
+}
+
+.progress-bar-old-x2 {
+    background: #F9625C;
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    right: 0px;
+    top: 0px;
 }
 
 .name {
     padding: 10px;
+}
+
+.center-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mt-2-2 {
+    margin-top: 2.2rem;
 }
