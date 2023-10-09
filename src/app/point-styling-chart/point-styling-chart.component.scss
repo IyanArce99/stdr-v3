@@ -1,0 +1,65 @@
+.checkbox-container label {
+    display: flex; /* O puedes usar 'inline-block' dependiendo de tu diseño */
+    align-items: center; /* Esto alinea verticalmente el checkbox y el texto */
+    margin-bottom: 5px; /* Ajusta el espacio entre los elementos */
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    margin-top: 10px;
+    margin-right: 10px; /* Ajusta el espacio entre el checkbox y el texto */
+  }
+  
+
+  .checkbox-container {
+    display: flex;
+  }
+  
+  .checkbox-container label {
+  //  display: inline-block;
+    margin-right: 15px; /* Ajusta el espacio entre los elementos */
+  }
+
+  
+  .boton-filtro {
+    border: none; /* Elimina el borde */
+    background-color: transparent; /* Hace que el fondo sea transparente */
+    padding: 0; /* Elimina el espacio interior del botón */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es un elemento interactivo */
+  }
+  
+  .boton-filtro img {
+    width: 30px; /* Ancho deseado */
+    height: 30px; /* Alto deseado */
+  }
+  
+  .boton-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-container {
+    position: absolute;
+   //top: 100%;
+    //right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: none;
+  }
+  
+  .dropdown-container.show {
+    display: block;
+  }
+  
+  .checkbox-container {
+    padding: 10px;
+  }
+  
+  .scrollable {
+    max-height: 200px; /* Define la altura máxima */
+    overflow-y: auto; /* Habilita el desplazamiento vertical si es necesario */
+  }
+  
+  
+  

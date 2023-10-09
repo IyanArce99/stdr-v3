@@ -1,1 +1,30 @@
-<canvas id="myChart" style="max-width: 500px; max-height: 500px;"></canvas>
+<button class="boton-filtro" (click)="toggleDropdown()">
+  <img src="assets/images/filtrar.png" alt="Filtro">
+</button>
+
+<div class="dropdown-container" [ngClass]="{'show': mostrarDropdown}">
+
+    <div class="checkbox-container scrollable">
+
+    <div id="checkboxContainer" >
+    <label >
+      <input type="checkbox" id="checkAll"> Marcar Todos
+    </label>
+
+    <label *ngFor="let serie of series">
+
+      <input type="checkbox" id="checkData"  class="checkbox" checked [attr.data-series]="serie.seriesIndex.toString()"> {{ serie.label }}
+
+    </label>
+ 
+  </div>
+</div>
+</div>
+
+
+  <canvas id="myChart" style="max-width: 500px; max-height: 500px;"></canvas>
+
+
+
+
+  

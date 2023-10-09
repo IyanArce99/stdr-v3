@@ -24,9 +24,13 @@ import { LineChartStackedComponent } from 'src/app/line-chart-stacked/line-chart
 import { StackedBarChartComponent } from 'src/app/stacked-bar-chart/stacked-bar-chart.component';
  import { TableHeapmapComponent } from 'src/app/table-heapmap/table-heapmap.component';
 
+ import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     SharedComponentsModule,
     NgxEchartsModule.forRoot({
       echarts
