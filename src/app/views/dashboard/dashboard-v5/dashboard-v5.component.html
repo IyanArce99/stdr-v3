@@ -13,15 +13,24 @@
         <div class="col-lg-9 col-md-12">
             <div class="card mb-4">
                 <div class="card-body">
-                    <div class="card-title">How is our total  distributed geographically?</div>
+                    <div class="card-title">How is our total distributed geographically?</div>
                     <div *ngFor="let country of chartCountryTotal" class="progress mb-2">
                         <span class="name mr-2">{{country.countryName}}</span>
-                        <div class="progress-bar" role="progressbar" [ngStyle]="{'width': country.totalPercentaje + '%'}" aria-valuenow="{{country.totalPercentaje}}" aria-valuemin="0" aria-valuemax="100">{{country.totalPercentaje}}M
-                            <div class="progress-bar-old" role="progressbar" [ngStyle]="{'width': country.lastTwoMonths + '%'}" aria-valuenow="{{country.lastTwoMonths}}" aria-valuemin="0" aria-valuemax="100">{{country.lastTwoMonths}}M
-                                <div class="progress-bar-old-x2" role="progressbar" [ngStyle]="{'width': country.overTwoMonths + '%'}" aria-valuenow="{{country.overTwoMonths}}" aria-valuemin="0" aria-valuemax="100">{{country.overTwoMonths}}M</div>
+                        <div class="progress-bar" role="progressbar"
+                            [ngStyle]="{'width': country.totalPercentaje + '%'}"
+                            aria-valuenow="{{country.totalPercentaje}}" aria-valuemin="0" aria-valuemax="100">
+                            {{country.totalPercentaje}}M
+                            <div class="progress-bar-old" role="progressbar"
+                                [ngStyle]="{'width': country.lastTwoMonths + '%'}"
+                                aria-valuenow="{{country.lastTwoMonths}}" aria-valuemin="0" aria-valuemax="100">
+                                {{country.lastTwoMonths}}M
+                                <div class="progress-bar-old-x2" role="progressbar"
+                                    [ngStyle]="{'width': country.overTwoMonths + '%'}"
+                                    aria-valuenow="{{country.overTwoMonths}}" aria-valuemin="0" aria-valuemax="100">
+                                    {{country.overTwoMonths}}M</div>
                             </div>
                         </div>
-                      </div>
+                    </div>
                     <!-- <div echarts [options]="salesChartBar" [autoResize]="true" style="height: 300px;"></div> -->
                 </div>
             </div>
@@ -29,178 +38,62 @@
         <div class="col-lg-3 col-sm-12">
             <div class="card mb-4 center-chart">
                 <div class="card-body">
-                    <div class="card-title">Sales by Countries</div>
+                    <div class="card-title">Violation type</div>
                     <app-doughnut-charts></app-doughnut-charts>
                 </div>
             </div>
 
             <div class="card mb-4 center-chart mt-2-2">
                 <div class="card-body">
-                    <div class="card-title">Sales by Countries</div>
+                    <div class="card-title">Violation source</div>
                     <app-polar-area-chart></app-polar-area-chart>
                 </div>
             </div>
         </div>
     </div>
-
-
-    
-
-
-   
-
-
     <div class="row">
-        <div class="col-lg-6 col-md-12">
-
-          
-         <div class="row">
-            <div class="col-md-12">
-                <div class="card mb-4">
-                    <div class="card-body">
-    
-            <app-point-styling-chart></app-point-styling-chart>
-            </div>
-                </div>
-        </div>
-                 <div class="col-md-12">
-                    <div >
-                        <div class="card-body">
-                        
-
-                            <app-polar-area-chart></app-polar-area-chart>
-                        </div>
-                       
-                       
-                    </div>
-                </div>
-
-              
-           
-        </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- <div class="card mb-4">
-                        <div class="card-body">
-                            <h6 class="mb-2 text-muted">iPhone x Stock</h6>
-                            <p class="mb-1 text-24 font-weight-light text-title">50%</p>
-                            <p class="mb-1">
-
-                                <app-point-styling-chart></app-point-styling-chart>
-                                <ngb-progressbar type="success" [value]="50" height="4px"></ngb-progressbar>
-                                </p>
-                            <small class="text-muted">Most sold in last 3 days</small>
-
-                          
-                        </div>
-                                
-                            
-                    </div> -->
-
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h6 class="mb-2 text-muted"></h6>
-                            <p class="mb-1 text-24 font-weight-light text-title"></p>
-                            <p class="mb-1">
-
-                                <app-doughnut-charts></app-doughnut-charts>
-                             <!--   <ngb-progressbar type="danger" [value]="90" height="4px"></ngb-progressbar>
-                                 </p>
-                            <small class="text-muted">Most sold in last 7 days</small>
-                            -->
-                           
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="col-lg-6 col-md-12">
-
+        <div class="col-md-6">
             <div class="card mb-4">
                 <div class="card-body">
-
-                    
-                  <!--  <div class="card-title">Top Selling Products</div>
-                    <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-3">
-                        <img class="avatar-lg mb-3 mb-sm-0 rounded me-sm-3" src="./assets/images/products/headphone-4.jpg" alt="">
-                        <div class="flex-grow-1">
-                            <h5 class=""><a href="">Wireless Headphone E23</a></h5>
-                            <p class="m-0 text-small text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <p class="text-small text-danger m-0">$450 <del class="text-muted">$500</del></p>
-                        </div>
-                        <div>
-                            <button class="btn btn-outline-primary mt-3 mb-3 m-sm-0 btn-rounded btn-sm">View details</button>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-3">
-                        <img class="avatar-lg mb-3 mb-sm-0 rounded me-sm-3" src="./assets/images/products/headphone-2.jpg" alt="">
-                        <div class="flex-grow-1">
-                            <h5 class=""><a href="">Wireless Headphone Y902</a></h5>
-                            <p class="m-0 text-small text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <p class="text-small text-danger m-0">$550 <del class="text-muted">$600</del></p>
-                        </div>
-                        <div>
-                            <button class="btn btn-outline-primary mt-3 mb-3 m-sm-0 btn-sm btn-rounded">View details</button>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-3">
-                        <img class="avatar-lg mb-3 mb-sm-0 rounded me-sm-3" src="./assets/images/products/headphone-3.jpg" alt="">
-                        <div class="flex-grow-1">
-                            <h5 class=""><a href="">Wireless Headphone E09</a></h5>
-                            <p class="m-0 text-small text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <p class="text-small text-danger m-0">$250 <del class="text-muted">$300</del></p>
-                        </div>
-                        <div>
-                            <button class="btn btn-outline-primary mt-3 mb-3 m-sm-0 btn-sm btn-rounded">View details</button>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-3">
-                        <img class="avatar-lg mb-3 mb-sm-0 rounded me-sm-3" src="./assets/images/products/headphone-4.jpg" alt="">
-                        <div class="flex-grow-1">
-                            <h5 class=""><a href="">Wireless Headphone X89</a></h5>
-                            <p class="m-0 text-small text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <p class="text-small text-danger m-0">$450 <del class="text-muted">$500</del></p>
-                        </div>
-                        <div>
-                            <button class="btn btn-outline-primary mt-3 mb-3 m-sm-0 btn-sm btn-rounded">View details</button>
-                        </div>
-                    </div>
+                    <div class="card-title">Findings per country</div>
+                    <app-point-styling-chart></app-point-styling-chart>
                 </div>
-            </div>-->
-
-           
-                </div>
-        </div>
-
-
-
-        <div class="card mb-4">
-            <div class="card-body p-0">
-
-                <app-line-chart-stacked></app-line-chart-stacked>
-               
-               
-        
-
-
             </div>
         </div>
-
-
-        <div class="col-md-12">
-            <div class="card mb-4">
-                <div class="card-body p-0">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">Distributed geographically</div>
                     <app-stacked-bar-chart></app-stacked-bar-chart>
-
                 </div>
             </div>
         </div>
 
-        <app-table-heapmap></app-table-heapmap>
-
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="card-title">Findings per country</div>
+                    <app-line-chart-stacked></app-line-chart-stacked>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">Distributed geographically</div>
+                    <app-table-heapmap></app-table-heapmap>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="card-title">Findings per country</div>
+                    <h1>Tabla</h1>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

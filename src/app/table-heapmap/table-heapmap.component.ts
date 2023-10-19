@@ -19,37 +19,84 @@ export class TableHeapmapComponent  implements OnInit{
         name: 'Root',
         children: [
           {
-            name: 'Child 1',
-            value: 10,
+              name: 'USA',
+              value: '100',
+          },
+          {
+              name: 'Japan',
+              value: '65',
+          },
+          {
+              name: 'China',
+              value: '57',
+          },
+          {
+              name: 'Canada',
+              value: '55',
+          },
+          {
+              name: 'Spain',
+              value: '53',
+          },
+          {
+              name: 'France',
+              value: '52',
+          },
+          {
+              name: 'UK',
+              value: '50',
+          },
+          {
+              name: 'Germany',
+              value: '47',
+          },
+          {
+              name: 'South Korea',
+              value: '36',
+          },
+          {
+              name: 'Malasya',
+              value: '36',
+          },
+          {
+              name: 'Poland',
+              value: '36',
+          },
+          {
+              name: 'Finland',
+              value: '34',
+          },
+          {
+              name: 'Italy',
+              value: '34',
+          },
+          {
+              name: 'Netherlands',
+              value: '33',
+          },
+          {
+              name: 'Australia',
+              value: '31',
+          },
+          {
+              name: 'Mónaco',
+              value: '30',
+          },
+          {
+              name: 'Belgium',
+              value: '21',
+          },
+          {
+              name: 'Denmark',
+              value: '11',
+          },
+      ]
       
-          },
-          {
-            name: 'Child 2',
-            value: 20,
-           
-          },
-          {
-            name: 'Child 3',
-            value: 15
-          },
-          {
-            name: 'Child 4',
-            value: 5
-          },
-          {
-            name: 'Child 5',
-            value: 17
-          },
-          {
-            name: 'Child 6',
-            value: 7
-          }
-        ]
       };
       
 
-      const width = 500;
-      const height = 500;
+      const width = 600;
+      const height = 400;
     
       const treemap = d3.treemap()
         .size([width, height])

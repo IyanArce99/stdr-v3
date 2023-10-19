@@ -17,7 +17,7 @@ export class DoughnutChartsComponent implements OnInit {
 const doughnutChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
+  labels: ['Basic', 'YAML Credentials', 'JWT Token', 'Python Credentials', 'Generic API key'],
   datasets: [{
     label: 'My Dataset',
     data: [12, 19, 3, 5, 2, 3],

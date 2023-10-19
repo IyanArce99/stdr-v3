@@ -14,17 +14,26 @@ import Chart from 'chart.js/auto';
 export class PointStylingChartComponent implements OnInit {  
   myChart: Chart;
   series = [
-    { label: 'Serie 1', checked: true, seriesIndex: parseInt("00", 10) }, // Esto devolverá 0
-    { label: 'Serie 2', checked: true, seriesIndex: parseInt("01", 10) }, // Esto devolverá 1
-    { label: 'Serie 3', checked: true, seriesIndex: parseInt("02", 10) },  // Esto devolverá 2
-    { label: 'Serie 4', checked: true, seriesIndex: parseInt("03", 10) }, // Esto devolverá 3
-    { label: 'Serie 5', checked: true, seriesIndex: parseInt("04", 10) }, // Esto devolverá 4
-    { label: 'Serie 6', checked: true, seriesIndex: parseInt("05", 10) }, // Esto devolverá 5
-    { label: 'Serie 7', checked: true, seriesIndex: parseInt("06", 10) }, // Esto devolverá 6
-    { label: 'Serie 8', checked: true, seriesIndex: parseInt("07", 10) }, // Esto devolverá 7
-    { label: 'Serie 9', checked: true, seriesIndex: parseInt("08", 10) },  // Esto devolverá 8
-    { label: 'Serie 10', checked: true, seriesIndex: parseInt("09", 10) },  // Esto dev 9
-  ];
+    { label: 'USA', checked: true, seriesIndex: parseInt("00", 10) },
+    { label: 'Japan', checked: true, seriesIndex: parseInt("01", 10) },
+    { label: 'China', checked: true, seriesIndex: parseInt("02", 10) },
+    { label: 'Canada', checked: true, seriesIndex: parseInt("03", 10) },
+    { label: 'Spain', checked: true, seriesIndex: parseInt("04", 10) },
+    { label: 'France', checked: true, seriesIndex: parseInt("05", 10) },
+    { label: 'UK', checked: true, seriesIndex: parseInt("06", 10) },
+    { label: 'Germany', checked: true, seriesIndex: parseInt("07", 10) },
+    { label: 'South Korea', checked: true, seriesIndex: parseInt("08", 10) },
+    { label: 'Malasya', checked: true, seriesIndex: parseInt("09", 10) },
+    { label: 'Poland', checked: true, seriesIndex: parseInt("10", 10) },
+    { label: 'Finland', checked: true, seriesIndex: parseInt("11", 10) },
+    { label: 'Italy', checked: true, seriesIndex: parseInt("12", 10) },
+    { label: 'Netherlands', checked: true, seriesIndex: parseInt("13", 10) },
+    { label: 'Australia', checked: true, seriesIndex: parseInt("14", 10) },
+    { label: 'Mónaco', checked: true, seriesIndex: parseInt("15", 10) },
+    { label: 'Belgium', checked: true, seriesIndex: parseInt("16", 10) },
+    { label: 'Denmark', checked: true, seriesIndex: parseInt("17", 10) }
+];
+
   
 
    mostrarDropdown = false;
@@ -45,63 +54,111 @@ export class PointStylingChartComponent implements OnInit {
         labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'], // Los meses como etiquetas
         datasets: [
           {
-              label: 'Serie 1',
-              data: [20, 10, 25, 30, 35, 40],
+              label: 'USA',
+              data: this.generateRandomData(6),
               borderColor: 'red',
               borderWidth: 1,
           },
           {
-              label: 'Serie 2',
-              data: [30, 40, 50, 60, 70, 80],
+              label: 'Japan',
+              data: this.generateRandomData(6),
               borderColor: 'blue',
               borderWidth: 1,
           },
           {
-              label: 'Serie 3',
-              data: [10, 20, 30, 40, 50, 60],
+              label: 'China',
+              data: this.generateRandomData(6),
               borderColor: 'green',
               borderWidth: 1,
           },
           {
-              label: 'Serie 4',
-              data: [15, 25, 35, 45, 55, 65],
+              label: 'Canada',
+              data: this.generateRandomData(6),
               borderColor: 'purple',
               borderWidth: 1,
           },
           {
-              label: 'Serie 5',
-              data: [5, 15, 25, 35, 45, 55],
+              label: 'Spain',
+              data: this.generateRandomData(6),
               borderColor: 'orange',
               borderWidth: 1,
           },
           {
-              label: 'Serie 6',
-              data: [12, 24, 36, 48, 60, 72],
+              label: 'France',
+              data: this.generateRandomData(6),
               borderColor: 'cyan',
               borderWidth: 1,
           },
           {
-              label: 'Serie 7',
-              data: [8, 16, 24, 32, 40, 48],
+              label: 'UK',
+              data: this.generateRandomData(6),
               borderColor: 'magenta',
               borderWidth: 1,
           },
           {
-              label: 'Serie 8',
-              data: [18, 28, 38, 48, 58, 68],
+              label: 'Germany',
+              data: this.generateRandomData(6),
               borderColor: 'brown',
               borderWidth: 1,
           },
           {
-              label: 'Serie 9',
-              data: [22, 33, 44, 55, 66, 77],
+              label: 'South Korea',
+              data: this.generateRandomData(6),
               borderColor: 'gray',
               borderWidth: 1,
           },
           {
-              label: 'Serie 10',
-              data: [7, 14, 21, 28, 35, 42],
+              label: 'Malasya',
+              data: this.generateRandomData(6),
               borderColor: 'pink',
+              borderWidth: 1,
+          },
+          {
+              label: 'Poland',
+              data: this.generateRandomData(6),
+              borderColor: 'yellow',
+              borderWidth: 1,
+          },
+          {
+              label: 'Finland',
+              data: this.generateRandomData(6),
+              borderColor: 'violet',
+              borderWidth: 1,
+          },
+          {
+              label: 'Italy',
+              data: this.generateRandomData(6),
+              borderColor: 'olive',
+              borderWidth: 1,
+          },
+          {
+              label: 'Netherlands',
+              data: this.generateRandomData(6),
+              borderColor: 'lime',
+              borderWidth: 1,
+          },
+          {
+              label: 'Australia',
+              data: this.generateRandomData(6),
+              borderColor: 'teal',
+              borderWidth: 1,
+          },
+          {
+              label: 'Mónaco',
+              data: this.generateRandomData(6),
+              borderColor: 'navy',
+              borderWidth: 1,
+          },
+          {
+              label: 'Belgium',
+              data: this.generateRandomData(6),
+              borderColor: 'maroon',
+              borderWidth: 1,
+          },
+          {
+              label: 'Denmark',
+              data: this.generateRandomData(6),
+              borderColor: 'silver',
               borderWidth: 1,
           },
       ]
@@ -159,7 +216,11 @@ checkboxContainer.addEventListener('change', function(event) {
   }
 });
 
-} 
+  }
+  
+  generateRandomData(length) {
+    return Array.from({ length }, () => Math.floor(Math.random() * 100));
+}
   }
 
   
