@@ -4,23 +4,21 @@ import { FullscreenTableComponent } from './fullscreen-table/fullscreen-table.co
 import { PagingTableComponent } from './paging-table/paging-table.component';
 import { FilterTableComponent } from './filter-table/filter-table.component';
 import { ListPaginationComponent } from './list-pagination/list-pagination.component';
+import { GeneralComponent } from '../settings/general/general.component';
+import { SecurityComponent } from '../settings/security/security.component';
 
 const routes: Routes = [
   {
-    path: 'list',
-    component: ListPaginationComponent
+    path: 'general',
+    component: GeneralComponent
   },
   {
     path: 'full',
     component: FullscreenTableComponent
   },
   {
-    path: 'paging',
-    component: PagingTableComponent
-  },
-  {
-    path: 'filter',
-    component: FilterTableComponent
+    path: 'security',
+    component: SecurityComponent
   }
 ];
 

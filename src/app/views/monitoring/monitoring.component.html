@@ -1,0 +1,82 @@
+<div class="">
+    <div class="breadcrumb">
+      <h1>Users</h1>
+      <ul>
+        <li><a href="#">Users management</a></li>
+        <li>Users</li>
+        <li class="add"(click)="confirm(modalConfirm)"><i class="i-Add">Add</i></li>
+
+      </ul>
+    </div>
+  
+    <div class="separator-breadcrumb border-top"></div>
+
+    <div class="row">
+      <div class="col-md-12">
+          <div class="card  o-hidden py-4 px-2">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Secret</th>
+                    <th scope="col">Rule</th>
+                    <th scope="col">Entity</th>
+                    <th scope="col">Platform</th>
+                    <th scope="col">Repository</th>
+                    <th scope="col">Entropy</th>
+                    <th scope="col">Hash</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let el of monitoringMock">
+                    <th scope="row">1</th>
+                    <td>{{el.secret}}</td>
+                    <td>{{el.rule}}</td>
+                    <td>{{el.entity}}</td>
+                    <td>{{el.platform}}</td>
+                    <td>{{el.entropy}}</td>
+                    <td>{{el.hash}}</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+      </div>
+    </div>
+</div>  
+<ng-template #modalConfirm let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">New scan</h4>
+    <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row row-xs mb-3">
+      <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Name">
+      </div>
+      <div class="col-md-6 mt-3 mt-md-0">
+          <input type="password" class="form-control" placeholder="Description">
+      </div>
+    </div>
+    <div class="row row-xs mb-3">
+      <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Business Owner">
+      </div>
+      <div class="col-md-6 mt-3 mt-md-0">
+          <input type="password" class="form-control" placeholder="Platform">
+      </div>
+    </div>
+    <div class="row row-xs mb-3">
+      <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Schedule">
+      </div>
+      <div class="col-md-6 mt-3 mt-md-0">
+          <input type="password" class="form-control" placeholder="Rules">
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary btn-rounded" (click)="modal.dismiss('cancel')">Cancel</button>
+    <button type="button" ngbAutofocus class="btn btn-danger btn-rounded" (click)="modal.close('Ok')">Ok</button>
+  </div>
+</ng-template>

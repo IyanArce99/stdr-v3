@@ -1,9 +1,9 @@
 <div class="">
     <div class="breadcrumb">
-      <h1>Fullscreen</h1>
+      <h1>Users</h1>
       <ul>
-        <li><a href="#">Data Table</a></li>
-        <li>Fullscreen</li>
+        <li><a href="#">Users management</a></li>
+        <li>Users</li>
       </ul>
     </div>
   
@@ -24,25 +24,30 @@
               [rows]="products$ | async">
               <ngx-datatable-column name="photo" [maxWidth]="100">
                   <ng-template ngx-datatable-header-template>
-                    Thumbnail
+                    Image
                   </ng-template>
                     <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
                         <img height="32px" width="32px" style="border-radius: 4px" [src]="value" alt="">
                     </ng-template>
                 </ngx-datatable-column>
-                <ngx-datatable-column name="name" [width]="300">
+                <ngx-datatable-column name="username" [width]="150">
                   <ng-template ngx-datatable-header-template>
-                    Title
+                    Username
                   </ng-template>
                 </ngx-datatable-column>
-                <ngx-datatable-column name="category">
+                <ngx-datatable-column name="email">
                   <ng-template ngx-datatable-header-template>
-                    Category
+                    Email
                   </ng-template>
                 </ngx-datatable-column>
-                <ngx-datatable-column name="subtitle">
+                <ngx-datatable-column name="memberOf">
                   <ng-template ngx-datatable-header-template>
-                    Description
+                    Member of
+                  </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="permissions">
+                  <ng-template ngx-datatable-header-template>
+                    Permissions
                   </ng-template>
                 </ngx-datatable-column>
             </ngx-datatable>
