@@ -1,9 +1,9 @@
 <div class="">
     <div class="breadcrumb">
-      <h1>Users</h1>
+      <h1>Monitoring</h1>
       <ul>
-        <li><a href="#">Users management</a></li>
-        <li>Users</li>
+        <li><a href="#">Monitoring management</a></li>
+        <li>Monitoring</li>
         <li class="add"(click)="confirm(modalConfirm)"><i class="i-Add">Add</i></li>
 
       </ul>
@@ -22,17 +22,17 @@
                     <th scope="col">Entity</th>
                     <th scope="col">Platform</th>
                     <th scope="col">Repository</th>
-                    <th scope="col">Entropy</th>
-                    <th scope="col">Hash</th>
+                    <th scope="col">Schedule</th>
+                    <th scope="col">Scan status</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let el of monitoringMock">
-                    <th scope="row">1</th>
-                    <td>{{el.secret}}</td>
+                    <th scope="row">{{el.secret}}</th>
                     <td>{{el.rule}}</td>
                     <td>{{el.entity}}</td>
                     <td>{{el.platform}}</td>
+                    <td>{{el.repository}}</td>
                     <td>{{el.entropy}}</td>
                     <td>{{el.hash}}</td>
                   </tr>

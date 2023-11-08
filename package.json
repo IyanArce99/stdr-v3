@@ -33,6 +33,7 @@
     "bootstrap": "5.2.0-beta1",
     "chart.js": "^4.4.0",
     "core-js": "3.6.4",
+    "country-flag-icons": "^1.5.7",
     "d3": "^7.8.5",
     "date-fns": "2.10.0",
     "echarts": "^5.4.0",

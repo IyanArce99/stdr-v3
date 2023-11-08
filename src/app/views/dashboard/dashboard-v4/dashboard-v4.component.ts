@@ -54,7 +54,7 @@ export class DashboardV4Component implements OnInit {
 						color: 'rgba(102, 51, 153, 0.68)',
 					},
 					itemStyle: {
-						color: '#663399'
+						color: '#FF0000'
 					}
 				}, {
 					type: 'line',

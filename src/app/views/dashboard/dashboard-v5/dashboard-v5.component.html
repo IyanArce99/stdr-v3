@@ -53,7 +53,7 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <div class="card mb-4">
+            <div class="card mb-4 w-full">
                 <div class="card-body">
                     <div class="card-title">Findings per country</div>
                     <app-point-styling-chart></app-point-styling-chart>
@@ -61,7 +61,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="card">
+            <div class="card w-full">
                 <div class="card-body">
                     <div class="card-title">Distributed geographically</div>
                     <app-stacked-bar-chart></app-stacked-bar-chart>
@@ -70,7 +70,7 @@
         </div>
 
         <div class="col-md-6">
-            <div class="card mb-4">
+            <div class="card mb-4 w-full">
                 <div class="card-body">
                     <div class="card-title">Findings per country</div>
                     <app-line-chart-stacked></app-line-chart-stacked>
@@ -78,7 +78,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="card">
+            <div class="card w-full">
                 <div class="card-body">
                     <div class="card-title">Distributed geographically</div>
                     <app-table-heapmap></app-table-heapmap>
@@ -87,11 +87,264 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="card mb-4">
                 <div class="card-body">
                     <div class="card-title">Findings per country</div>
-                    <h1>Tabla</h1>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Secret violations</th>
+                            <th scope="col">
+                                <img
+                                alt="United States"
+                                width="30px"
+                                src="http://purecatamphetamine.github.io/country-flag-icons/3x2/ES.svg"/>
+                                94%
+                            </th>
+                            <th scope="col">
+                                <img
+                                alt="United States"
+                                width="30px"
+                                src="http://purecatamphetamine.github.io/country-flag-icons/3x2/MX.svg"/>
+                                91%
+                            </th>
+                            <th scope="col">
+                                <img
+                                alt="United States"
+                                width="30px"
+                                src="http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg"/>
+                                96%
+                            </th>
+                            <th scope="col">
+                                <img
+                                alt="United States"
+                                width="30px"
+                                src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"/>
+                                94%
+                            </th>
+                            <th scope="col">
+                                <img
+                                alt="United States"
+                                width="30px"
+                                src="http://purecatamphetamine.github.io/country-flag-icons/3x2/BR.svg"/>
+                                95%
+                            </th>
+                            <th scope="col">
+                                <img
+                                alt="United States"
+                                width="30px"
+                                src="http://purecatamphetamine.github.io/country-flag-icons/3x2/PL.svg"/>
+                                93%
+                            </th>
+                            <th scope="col">
+                                <img
+                                alt="United States"
+                                width="30px"
+                                src="http://purecatamphetamine.github.io/country-flag-icons/3x2/PT.svg"/>
+                                90%
+                            </th>
+                            <th scope="col">
+                                <img
+                                alt="United States"
+                                width="30px"
+                                src="http://purecatamphetamine.github.io/country-flag-icons/3x2/CL.svg"/>
+                                94%
+                            </th>
+                            <th scope="col">
+                                <img
+                                alt="United States"
+                                width="30px"
+                                src="http://purecatamphetamine.github.io/country-flag-icons/3x2/AR.svg"/>
+                                92%
+                            </th>
+                            <th scope="col">
+                                <img
+                                alt="United States"
+                                width="30px"
+                                src="http://purecatamphetamine.github.io/country-flag-icons/3x2/UY.svg"/>
+                                80%
+                            </th>
+                            <th scope="col">
+                                <img
+                                alt="United States"
+                                width="30px"
+                                src="http://purecatamphetamine.github.io/country-flag-icons/3x2/CO.svg"/>
+                                78%
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Total</th>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>99%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>99%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Clear text password</th>
+                            <td>98%</td>
+                            <td>94%</td>
+                            <td>97%</td>
+                            <td>99%</td>
+                            <td>93%</td>
+                            <td>96%</td>
+                            <td>95%</td>
+                            <td>99%</td>
+                            <td>100%</td>
+                            <td>92%</td>
+                            <td>100%</td>                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Api Keys</th>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>99%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>99%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>99%</td>
+                            <td>100%</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Tokens</th>
+                            <td>84%</td>
+                            <td>93%</td>
+                            <td>80%</td>
+                            <td>91%</td>
+                            <td>92%</td>
+                            <td>89%</td>
+                            <td>85%</td>
+                            <td>87%</td>
+                            <td>94%</td>
+                            <td>80%</td>
+                            <td>96%</td>                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Domain Admin Credential</th>
+                            <td>80%</td>
+                            <td>88%</td>
+                            <td>83%</td>
+                            <td>95%</td>
+                            <td>92%</td>
+                            <td>87%</td>
+                            <td>89%</td>
+                            <td>84%</td>
+                            <td>91%</td>
+                            <td>86%</td>
+                            <td>100%</td>                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Shadow Admins</th>
+                            <td>85%</td>
+                            <td>93%</td>
+                            <td>88%</td>
+                            <td>89%</td>
+                            <td>82%</td>
+                            <td>97%</td>
+                            <td>80%</td>
+                            <td>91%</td>
+                            <td>96%</td>
+                            <td>100%</td>
+                            <td>84%</td>                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Sources</th>
+                            <td>85%</td>
+                            <td>93%</td>
+                            <td>88%</td>
+                            <td>89%</td>
+                            <td>82%</td>
+                            <td>97%</td>
+                            <td>80%</td>
+                            <td>91%</td>
+                            <td>96%</td>
+                            <td>100%</td>
+                            <td>84%</td>                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Github</th>
+                            <td>85%</td>
+                            <td>93%</td>
+                            <td>88%</td>
+                            <td>89%</td>
+                            <td>82%</td>
+                            <td>97%</td>
+                            <td>80%</td>
+                            <td>91%</td>
+                            <td>96%</td>
+                            <td>100%</td>
+                            <td>84%</td>                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Jira</th>
+                            <td>85%</td>
+                            <td>93%</td>
+                            <td>88%</td>
+                            <td>89%</td>
+                            <td>82%</td>
+                            <td>97%</td>
+                            <td>80%</td>
+                            <td>91%</td>
+                            <td>96%</td>
+                            <td>100%</td>
+                            <td>84%</td>                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Confluence</th>
+                            <td>85%</td>
+                            <td>93%</td>
+                            <td>88%</td>
+                            <td>89%</td>
+                            <td>82%</td>
+                            <td>97%</td>
+                            <td>80%</td>
+                            <td>91%</td>
+                            <td>96%</td>
+                            <td>100%</td>
+                            <td>84%</td>                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Servers</th>
+                            <td>85%</td>
+                            <td>93%</td>
+                            <td>88%</td>
+                            <td>89%</td>
+                            <td>82%</td>
+                            <td>97%</td>
+                            <td>80%</td>
+                            <td>91%</td>
+                            <td>96%</td>
+                            <td>100%</td>
+                            <td>84%</td>                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Workstations</th>
+                            <td>99%</td>
+                            <td>73%</td>
+                            <td>88%</td>
+                            <td>62%</td>
+                            <td>70%</td>
+                            <td>96%</td>
+                            <td>76%</td>
+                            <td>61%</td>
+                            <td>95%</td>
+                            <td>84%</td>
+                            <td>100%</td>                                                       
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
             </div>
         </div>

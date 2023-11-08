@@ -33,10 +33,10 @@ export class DashboadDefaultComponent implements OnInit {
 						origin: 'start'
 					},
 					lineStyle: {
-						color: '#663399',
+						color: '#FF0000',
 					},
 					itemStyle: {
-						color: '#663399'
+						color: '#FF0000'
 					}
 				}]
 			}

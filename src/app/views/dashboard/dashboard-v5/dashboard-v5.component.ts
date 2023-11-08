@@ -20,37 +20,37 @@ export class DashboardV5Component {
 
 	ngOnInit() {
         this.chartCountryTotal = [{
-            countryName: 'USA',
+            countryName: 'Spain',
             totalPercentaje: '100',
             lastTwoMonths: '35',
             overTwoMonths: '25'
         },
         {
-            countryName: 'Japan',
+            countryName: 'Mexico',
             totalPercentaje: '65',
             lastTwoMonths: '40',
             overTwoMonths: '20'
         },
         {
-            countryName: 'China',
+            countryName: 'United Kingdom',
             totalPercentaje: '57',
             lastTwoMonths: '37',
             overTwoMonths: '22'
         },
         {
-            countryName: 'Canada',
+            countryName: 'USA',
             totalPercentaje: '55',
             lastTwoMonths: '28',
             overTwoMonths: '15'
         },
         {
-            countryName: 'Spain',
+            countryName: 'Brasil',
             totalPercentaje: '53',
             lastTwoMonths: '28',
             overTwoMonths: '15'
         },
         {
-            countryName: 'France',
+            countryName: 'Ponland',
             totalPercentaje: '52',
             lastTwoMonths: '25',
             overTwoMonths: '25'
@@ -62,19 +62,19 @@ export class DashboardV5Component {
             overTwoMonths: '20'
         },
         {
-            countryName: 'Germany',
+            countryName: 'Argentina',
             totalPercentaje: '47',
             lastTwoMonths: '40',
             overTwoMonths: '20'
         },
         {
-            countryName: 'South Korea',
+            countryName: 'Uruguay',
             totalPercentaje: '36',
             lastTwoMonths: '40',
             overTwoMonths: '20'
         },
         {
-            countryName: 'Malasya',
+            countryName: 'Colombia',
             totalPercentaje: '36',
             lastTwoMonths: '40',
             overTwoMonths: '20'
@@ -145,10 +145,10 @@ export class DashboardV5Component {
 						origin: 'start'
 					},
 					lineStyle: {
-						color: '#663399',
+						color: '#FF0000',
 					},
 					itemStyle: {
-						color: '#663399'
+						color: '#FF0000'
 					}
 				}]
 			}

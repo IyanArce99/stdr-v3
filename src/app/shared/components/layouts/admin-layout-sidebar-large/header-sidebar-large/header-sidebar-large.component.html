@@ -1,6 +1,6 @@
 <div class="main-header">
     <div class="logo">
-        <img src="./assets/images/logo.png" alt="">
+        <img src="./assets/images/logo-stdr.png" alt="">
     </div>
 
     <div class="menu-toggle" (click)="toggelSidebar()">
@@ -65,40 +65,121 @@
     <div style="margin: auto"></div>
 
     <div class="header-part-right">
-        <i class="i-Magnifi-Glass1 header-icon" role="button" (click)="searchService.searchOpen = true"></i>
-        <i fullScreenWindow class="i-Full-Screen header-icon d-none d-sm-inline-block" role="button"></i>
-        <div ngbDropdown [placement]="'bottom-right'" class="d-none d-sm-inline-block">
-            <i ngbDropdownToggle class="i-Gear text-muted header-icon" role="button"></i>
-            <div ngbDropdownMenu class="menu-icon-grid-dropdown">
-                <div class="menu-icon-grid">
-                    <a href="#"><i class="i-Shop-4"></i> Home</a>
-                    <a href="#"><i class="i-Library"></i> UI Kits</a>
-                    <a href="#"><i class="i-Drop"></i> Apps</a>
-                    <a href="#"><i class="i-File-Clipboard-File--Text"></i> Forms</a>
-                    <a href="#"><i class="i-Checked-User"></i> Sessions</a>
-                    <a href="#"><i class="i-Ambulance"></i> Support</a>
-                </div>
-            </div>
-        </div>
-
         <div ngbDropdown [placement]="'bottom-right'">
             <div class="badge-top-container">
                 <span class="badge badge-primary">{{notifications.length}}</span>
-                <i ngbDropdownToggle class="i-Bell text-muted header-icon" role="button"></i>
+                <i ngbDropdownToggle class="i-Globe text-muted header-icon" role="button"></i>
             </div>
             <div ngbDropdownMenu class="notification-dropdown rtl-ps-none" perfectScrollbar>
-                <div class="dropdown-item d-flex" *ngFor="let item of notifications" [routerLink]="[item.link]">
-                    <div class="notification-icon">
-                        <i class="{{item.icon}} text-{{item.status}} me-1"></i>
-                    </div>
+                <!-- <div class="dropdown-item d-flex" *ngFor="let item of notifications" [routerLink]="[item.link]"> -->
+                <div class="dropdown-item d-flex">
                     <div class="notification-details flex-grow-1">
-                        <p class="m-0 d-flex align-items-center">
-                            <span>{{item.title}}</span>
-                            <span *ngIf="item.badge" class="badge badge-pill badge-{{item.status}} ms-1 me-1">{{item.badge}}</span>
-                            <span class="flex-grow-1"></span>
-                            <span class="text-small text-muted ms-auto">{{item.time | relativeTime}}</span>
+                        <p class="m-0 d-flex align-items-center justify-content-center">
+                            <img
+                            alt="United States"
+                            width="30px"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/ES.svg"/>
                         </p>
-                        <p class="text-small text-muted m-0">{{item.text | excerpt:30}}</p>
+                    </div>
+                </div>
+                <div class="dropdown-item d-flex">
+                    <div class="notification-details flex-grow-1">
+                        <p class="m-0 d-flex align-items-center justify-content-center">
+                            <img
+                            alt="United States"
+                            width="30px"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/MX.svg"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="dropdown-item d-flex">
+                    <div class="notification-details flex-grow-1">
+                        <p class="m-0 d-flex align-items-center justify-content-center">
+                            <img
+                            alt="United States"
+                            width="30px"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="dropdown-item d-flex">
+                    <div class="notification-details flex-grow-1">
+                        <p class="m-0 d-flex align-items-center justify-content-center">
+                            <img
+                            alt="United States"
+                            width="30px"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="dropdown-item d-flex">
+                    <div class="notification-details flex-grow-1">
+                        <p class="m-0 d-flex align-items-center justify-content-center">
+                            <img
+                            alt="United States"
+                            width="30px"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/BR.svg"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="dropdown-item d-flex">
+                    <div class="notification-details flex-grow-1">
+                        <p class="m-0 d-flex align-items-center justify-content-center">
+                            <img
+                            alt="United States"
+                            width="30px"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/PL.svg"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="dropdown-item d-flex">
+                    <div class="notification-details flex-grow-1">
+                        <p class="m-0 d-flex align-items-center justify-content-center">
+                            <img
+                            alt="United States"
+                            width="30px"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/PT.svg"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="dropdown-item d-flex">
+                    <div class="notification-details flex-grow-1">
+                        <p class="m-0 d-flex align-items-center justify-content-center">
+                            <img
+                            alt="United States"
+                            width="30px"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/CL.svg"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="dropdown-item d-flex">
+                    <div class="notification-details flex-grow-1">
+                        <p class="m-0 d-flex align-items-center justify-content-center">
+                            <img
+                            alt="United States"
+                            width="30px"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/AR.svg"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="dropdown-item d-flex">
+                    <div class="notification-details flex-grow-1">
+                        <p class="m-0 d-flex align-items-center justify-content-center">
+                            <img
+                            alt="United States"
+                            width="30px"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/UY.svg"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="dropdown-item d-flex">
+                    <div class="notification-details flex-grow-1">
+                        <p class="m-0 d-flex align-items-center justify-content-center">
+                            <img
+                            alt="United States"
+                            width="30px"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/CO.svg"/>
+                        </p>
                     </div>
                 </div>
             </div>

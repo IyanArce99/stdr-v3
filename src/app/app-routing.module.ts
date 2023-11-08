@@ -9,7 +9,7 @@ import { AdminLayoutSidebarLargeComponent } from './shared/components/layouts/ad
 const adminRoutes: Routes = [
     {
       path: 'dashboard',
-      loadChildrean: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
+      loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
     },
     {
       path: 'uikits',
@@ -56,7 +56,7 @@ const adminRoutes: Routes = [
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard/v1',
+    redirectTo: 'dashboard/v5',
     pathMatch: 'full'
   },
   {

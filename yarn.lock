@@ -2772,6 +2772,11 @@
     "path-type" "^4.0.0"
     "yaml" "^1.10.0"
 
+"country-flag-icons@^1.5.7":
+  "integrity" "sha512-AdvXhMcmSp7nBSkpGfW4qR/luAdRUutJqya9PuwRbsBzuoknThfultbv7Ib6fWsHXC43Es/4QJ8gzQQdBNm75A=="
+  "resolved" "https://registry.npmjs.org/country-flag-icons/-/country-flag-icons-1.5.7.tgz"
+  "version" "1.5.7"
+
 "critters@0.0.16":
   "integrity" "sha512-JwjgmO6i3y6RWtLYmXwO5jMd+maZt8Tnfu7VVISmEWyQqfLpB8soBswf8/2bu6SBXxtKA68Al3c+qIG1ApT68A=="
   "resolved" "https://registry.npmjs.org/critters/-/critters-0.0.16.tgz"
