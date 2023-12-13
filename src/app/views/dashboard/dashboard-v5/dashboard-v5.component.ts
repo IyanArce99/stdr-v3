@@ -1,6 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Renderer2  } from '@angular/core';
+import { ElementRef, ViewChild } from '@angular/core';
+
 import { EChartsOption } from 'echarts';
 import { echartStyles } from '../../../shared/echart-styles';
+
+import { PointStylingChartComponent } from '../../../point-styling-chart/point-styling-chart.component';
+
+
+import html2pdf from 'html2pdf.js';
+
+
 
 @Component({
   selector: 'app-dashboard-v5',
@@ -16,7 +25,6 @@ export class DashboardV5Component {
 
     chartCountryTotal: any;
 
-	constructor() { }
 
 	ngOnInit() {
         this.chartCountryTotal = [{
@@ -334,4 +342,74 @@ export class DashboardV5Component {
 	}
 
 
+  
+    @ViewChild('dashboardContent') dashboardContent: ElementRef;
+    exportingToPDF = false;
+
+    @ViewChild(PointStylingChartComponent) pointStylingChart: PointStylingChartComponent;
+
+
+
+    
+  constructor(private renderer: Renderer2) {}
+
+  isPdfExport = false;
+
+
+  
+
+  generatePDF() {
+    const content = this.dashboardContent.nativeElement;
+  
+    // Get all .row elements and set display: block for PDF export
+    const rows = content.querySelectorAll('.row');
+    rows.forEach(row => row.style.display = 'block');
+  
+    this.isPdfExport = true;
+
+
+    const rowColumna = content.querySelectorAll('.rowColumna');
+
+
+    rowColumna.forEach(rowColumna => {
+        rowColumna.style.flex = '0 0 auto';
+        rowColumna.style.width = '100%';
+        rowColumna.style.display = 'flex';
+      });
+      
+
+  
+    const pdfOptions = {
+      pagebreak: { mode: 'avoid-all', after: '.page-break' },
+      orientation: 'landscape',
+      filename :'dashboard.pdf',
+      margin: [0, 0, 0, 0], // [left, top, right, bottom]
+
+      jsPDF: { unit: 'mm', format: 'a4', fileName: 'dashboard.pdf' },
+    };
+  
+
+
+    html2pdf(content, pdfOptions).from(content).outputPdf().then(() => {
+        rows.forEach(row => row.style.removeProperty('display'));
+
+        rowColumna.forEach(rowColumna => {
+            rowColumna.style.removeProperty('flex');
+            rowColumna.style.removeProperty('width');
+            rowColumna.style.removeProperty('display');
+          });
+    });
+  }
+  
+  
+  
+  
+  
+  
+
+
+ 
+  
 }
+
+

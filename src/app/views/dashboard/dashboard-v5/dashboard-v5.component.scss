@@ -1,45 +1,46 @@
 .progress {
-    padding: 16px 0px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    position: relative;
-    background: white;
+  padding: 1.6vw 0; /* Using 1.6vw as an example, adjust as needed */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  background: white;
 }
 
 .progress-bar {
-    padding: 10px;
-    text-align: left;
-    position: absolute;
-    left: 100px;
-    background-color: rgba(54, 162, 235, 0.4);
-    max-width: -webkit-fill-available;
+  padding: 1vw; /* Using 1vw as an example, adjust as needed */
+  text-align: left;
+  position: absolute;
+  left: 10vw; /* Using 10vw as an example, adjust as needed */
+  background-color: rgba(54, 162, 235, 0.4);
+  max-width: -webkit-fill-available;
 }
 
 .progress-bar-old {
-    background: rgba(255, 206, 86, 0.6);
-    padding: 10px;
-    text-align: left;
-    position: absolute;
-    right: 0px;
+  background: rgba(255, 206, 86, 0.6);
+  padding: 1vw; /* Using 1vw as an example, adjust as needed */
+  text-align: left;
+  position: absolute;
+  right: 0;
 }
 
 .progress-bar-old-x2 {
-    background: rgba(255, 99, 132, 0.3);
-    padding: 10px;
-    text-align: left;
-    position: absolute;
-    right: 0px;
-    top: 0px;
+  background: rgba(255, 99, 132, 0.3);
+  padding: 1vw; /* Using 1vw as an example, adjust as needed */
+  text-align: left;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .name {
-    padding: 10px;
+  padding: 1vw; /* Using 1vw as an example, adjust as needed */
 }
+
 
 .center-chart {
     display: flex;
-    justify-content: center;
+    //justify-content: center;
     align-items: center;
 }
 
@@ -48,5 +49,23 @@
 }
 
 .w-full {
-    height: 513px;
+  height: 32.06rem; /* Assuming 1rem = 16px, so 513px / 16px = 32.06rem */
+}
+
+
+.export-button {
+   margin-left: 97%;
+   background-color: blue; /* Establece el color de fondo */
+   border: none;
+   color: blue; 
+ }
+
+
+@media print {
+.rowColumna{
+
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+}
 }
