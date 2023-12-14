@@ -2,11 +2,13 @@
 
 <div class="">
     <div class="breadcrumb">
-        <h1>Version 5</h1>
+        <h1>Global</h1>
         <ul>
             <li><a href="">Dashboard</a></li>
-            <li>Version 5</li>
+            <li>Global</li>
         </ul>
+        <span class="export" (click)="exportToPDF()"><i class="i-Add mr-2"></i>Export</span>
+        
     </div>
 
     <div class="separator-breadcrumb border-top"></div>
@@ -21,8 +23,8 @@
         <div class="col-lg-9 col-md-12">
             <div class="card mb-4">
                 <div class="card-body">
-                                           <div class="card-title">How is our total distributed geographically?</div>
-                                           <div *ngFor="let country of chartCountryTotal" class="progress mb-2">
+                    <div class="card-title">Geopgraphical distribution of the secrets and its status</div>
+                    <div *ngFor="let country of chartCountryTotal" class="progress mb-2">
                         <span class="name mr-2">{{country.countryName}}</span>
                         <div class="progress-bar" role="progressbar"
                             [ngStyle]="{'width': country.totalPercentaje + '%'}"

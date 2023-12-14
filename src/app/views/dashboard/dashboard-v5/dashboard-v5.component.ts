@@ -87,54 +87,54 @@ export class DashboardV5Component {
             lastTwoMonths: '40',
             overTwoMonths: '20'
         },
-        {
-            countryName: 'Poland',
-            totalPercentaje: '36',
-            lastTwoMonths: '40',
-            overTwoMonths: '20'
-        },
-        {
-            countryName: 'Finland',
-            totalPercentaje: '34',
-            lastTwoMonths: '40',
-            overTwoMonths: '20'
-        },
-        {
-            countryName: 'Italy',
-            totalPercentaje: '34',
-            lastTwoMonths: '40',
-            overTwoMonths: '20'
-        },
-        {
-            countryName: 'Netherlands',
-            totalPercentaje: '33',
-            lastTwoMonths: '40',
-            overTwoMonths: '20'
-        },
-        {
-            countryName: 'Australia',
-            totalPercentaje: '31',
-            lastTwoMonths: '40',
-            overTwoMonths: '20'
-        },
-        {
-            countryName: 'Mónaco',
-            totalPercentaje: '30',
-            lastTwoMonths: '40',
-            overTwoMonths: '20'
-        },
-        {
-            countryName: 'Belgium',
-            totalPercentaje: '21',
-            lastTwoMonths: '40',
-            overTwoMonths: '30'
-        },
-        {
-            countryName: 'Denmark',
-            totalPercentaje: '11',
-            lastTwoMonths: '45',
-            overTwoMonths: '45'
-        },
+        // {
+        //     countryName: 'Poland',
+        //     totalPercentaje: '36',
+        //     lastTwoMonths: '40',
+        //     overTwoMonths: '20'
+        // },
+        // {
+        //     countryName: 'Finland',
+        //     totalPercentaje: '34',
+        //     lastTwoMonths: '40',
+        //     overTwoMonths: '20'
+        // },
+        // {
+        //     countryName: 'Italy',
+        //     totalPercentaje: '34',
+        //     lastTwoMonths: '40',
+        //     overTwoMonths: '20'
+        // },
+        // {
+        //     countryName: 'Netherlands',
+        //     totalPercentaje: '33',
+        //     lastTwoMonths: '40',
+        //     overTwoMonths: '20'
+        // },
+        // {
+        //     countryName: 'Australia',
+        //     totalPercentaje: '31',
+        //     lastTwoMonths: '40',
+        //     overTwoMonths: '20'
+        // },
+        // {
+        //     countryName: 'Mónaco',
+        //     totalPercentaje: '30',
+        //     lastTwoMonths: '40',
+        //     overTwoMonths: '20'
+        // },
+        // {
+        //     countryName: 'Belgium',
+        //     totalPercentaje: '21',
+        //     lastTwoMonths: '40',
+        //     overTwoMonths: '30'
+        // },
+        // {
+        //     countryName: 'Denmark',
+        //     totalPercentaje: '11',
+        //     lastTwoMonths: '45',
+        //     overTwoMonths: '45'
+        // },
     ];
     
 		this.chartLineOption1 = {
@@ -410,6 +410,9 @@ export class DashboardV5Component {
 
  
   
+    exportToPDF() {
+        window.print();
+    }
 }
 
 

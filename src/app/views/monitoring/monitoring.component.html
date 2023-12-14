@@ -7,6 +7,7 @@
         <li class="add"(click)="confirm(modalConfirm)"><i class="i-Add">Add</i></li>
 
       </ul>
+      <span class="export" (click)="exportToPDF()"><i class="i-Add mr-2"></i>Export</span>
     </div>
   
     <div class="separator-breadcrumb border-top"></div>
@@ -22,8 +23,8 @@
                     <th scope="col">Entity</th>
                     <th scope="col">Platform</th>
                     <th scope="col">Repository</th>
-                    <th scope="col">Schedule</th>
-                    <th scope="col">Scan status</th>
+                    <th scope="col">File</th>
+                    <th scope="col">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -33,8 +34,8 @@
                     <td>{{el.entity}}</td>
                     <td>{{el.platform}}</td>
                     <td>{{el.repository}}</td>
-                    <td>{{el.entropy}}</td>
-                    <td>{{el.hash}}</td>
+                    <td>{{el.ruta}}</td>
+                    <td class="fs-3"><i class="i-Warning-Window mr-2"></i> <i class="i-Email"></i></td>
                   </tr>
                 </tbody>
               </table>
