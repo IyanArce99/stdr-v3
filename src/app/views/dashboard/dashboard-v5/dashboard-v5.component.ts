@@ -17,7 +17,7 @@ import html2pdf from 'html2pdf.js';
   styleUrls: ['./dashboard-v5.component.scss']
 })
 export class DashboardV5Component {
-	chartLineOption1: EChartsOption;
+    chartLineOption1: EChartsOption;
 	chartLineOption2: EChartsOption;
 	chartLineOption3: EChartsOption;
     salesChartBar: EChartsOption;
@@ -26,7 +26,9 @@ export class DashboardV5Component {
     chartCountryTotal: any;
 
 
+    
 	ngOnInit() {
+
         this.chartCountryTotal = [{
             countryName: 'Spain',
             totalPercentaje: '100',

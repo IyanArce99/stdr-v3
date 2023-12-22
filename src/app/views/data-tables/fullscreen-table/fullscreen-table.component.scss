@@ -1,0 +1,17 @@
+.btnUser{
+    padding-top:10px;
+}
+
+/* styles.css (o tu archivo de estilos) */
+.button-no-style {
+    background: none;
+    border: none;
+    cursor: pointer; /* Agregado para indicar que es un elemento interactivo */
+    padding: 0; /* Puedes ajustar según sea necesario */
+    padding-left: 15px;
+  
+  }
+  
+  .button-no-style i.i-Edit {
+    color: #d04343;
+  }

@@ -5,6 +5,7 @@
         <li><a href="#">Users management</a></li>
         <li>Users</li>
       </ul>
+      <li class="btnUser" (click)="confirm(modalConfirm)"><i class="i-Add">Add User</i></li>
     </div>
   
     <div class="separator-breadcrumb border-top"></div>
@@ -27,7 +28,7 @@
                     Image
                   </ng-template>
                     <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
-                        <img height="32px" width="32px" style="border-radius: 4px" [src]="value" alt="">
+                        <img height="32px" width="auto" style="border-radius: 4px" [src]="value" alt="">
                     </ng-template>
                 </ngx-datatable-column>
                 <ngx-datatable-column name="username" [width]="150">
@@ -50,8 +51,140 @@
                     Permissions
                   </ng-template>
                 </ngx-datatable-column>
+
+                <ngx-datatable-column name="acciones" [width]="100">
+                  <ng-template ngx-datatable-header-template>
+                    Acciones
+                  </ng-template>
+                  <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+                    <!-- Agregar un ícono de editar aquí -->
+                    <button  class="button-no-style" (click)="confirm(modalEdit)">
+                      <i class="i-Edit"></i>
+                     
+                    </button>
+                  </ng-template>
+                </ngx-datatable-column>
+
+
             </ngx-datatable>
           </div>
       </div>
     </div>
 </div>  
+
+
+<ng-template #modalConfirm let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">New User</h4>
+    <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+
+    <div class="form-group row">
+        <label for="inputPassword3" style="font-size: 14px;" class="col-sm-2 col-form-label">Image </label>
+        <div class="col-sm-10">
+          <input type="file" class="form-control-file" id="imageInput" accept="image/*">
+        </div>
+     </div>
+    
+      <div class="form-group row">
+        <label for="inputPassword3" style="font-size: 14px;" class="col-sm-2 col-form-label">Username</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="lastName" placeholder="Username">
+        </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputPassword3" style="font-size: 14px;" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="lastName" placeholder="Email">
+      </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputPassword3" style="font-size: 14px;" class="col-sm-2 col-form-label">Member of</label>
+    <div class="col-sm-10">
+      <input type="datetime-local" class="form-control" id="lastName" placeholder="Date and Time">
+    </div>
+</div>
+      <div class="form-group row">
+          <label for="inputEmail3"  style="font-size: 14px;" class="col-sm-2 col-form-label">Permissions</label>
+          <div class="col-sm-10">
+              <select class="form-select" aria-label="Default select example">
+                  <option selected value="1">ALL</option>
+                  <option value="2">LOCAL</option>
+                </select>                 
+          </div>
+      </div>
+    
+    </form>
+
+    
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary btn-rounded" (click)="modal.dismiss('cancel')">Cancel</button>
+    <button type="button" ngbAutofocus class="btn btn-danger btn-rounded" (click)="modal.close('Ok')">Ok</button>
+  </div>
+</ng-template>
+
+
+
+<ng-template #modalEdit let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Edit Scanning</h4>
+    <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+
+    <div class="form-group row">
+        <label for="inputPassword3" style="font-size: 14px;" class="col-sm-2 col-form-label">Image </label>
+        <div class="col-sm-10">
+          <input type="file" class="form-control-file" id="imageInput" accept="image/*">
+        </div>
+     </div>
+    
+      <div class="form-group row">
+        <label for="inputPassword3" style="font-size: 14px;" class="col-sm-2 col-form-label">Username</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="lastName" placeholder="Username">
+        </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputPassword3" style="font-size: 14px;" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="lastName" placeholder="Email">
+      </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputPassword3" style="font-size: 14px;" class="col-sm-2 col-form-label">Member of</label>
+    <div class="col-sm-10">
+      <input type="datetime-local" class="form-control" id="lastName" placeholder="Date and Time">
+    </div>
+</div>
+      <div class="form-group row">
+          <label for="inputEmail3"  style="font-size: 14px;" class="col-sm-2 col-form-label">Permissions</label>
+          <div class="col-sm-10">
+              <select class="form-select" aria-label="Default select example">
+                  <option selected value="1">ALL</option>
+                  <option value="2">LOCAL</option>
+                </select>                 
+          </div>
+      </div>
+    
+    </form>
+
+    
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary btn-rounded" (click)="modal.dismiss('cancel')">Cancel</button>
+    <button type="button" ngbAutofocus class="btn btn-danger btn-rounded" (click)="modal.close('Ok')">Ok</button>
+  </div>
+</ng-template>

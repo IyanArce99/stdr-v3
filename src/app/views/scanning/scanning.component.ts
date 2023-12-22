@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { DomSanitizer } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-scanning',
@@ -10,7 +12,7 @@ export class ScanningComponent {
   monitoringMock;
   confirmResut;
 
-  constructor(private modalService: NgbModal) {
+  constructor(private modalService: NgbModal , private sanitizer: DomSanitizer, private http: HttpClient) {
     
   }
   ngOnInit() {
@@ -166,4 +168,30 @@ export class ScanningComponent {
       this.confirmResut = `Dismissed with: ${reason}`;
     });
   }
+
+  descargarArchivo() {
+    const apiUrl = 'assets/archivo.txt';
+
+    const contenidoAdicional = 'Log.\n';
+
+    this.http.get(apiUrl, { responseType: 'text' }).subscribe(
+      (data: any) => {
+        const contenidoFinal = contenidoAdicional + data;
+        const blob = new Blob([contenidoFinal], { type: 'text/plain' });
+
+        // Crear un enlace (link) para descargar el archivo
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = 'archivo.txt';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      },
+      (error) => {
+        console.error('Error al descargar el archivo', error);
+      }
+    );
+  }
+  
+  
 }

@@ -5,16 +5,21 @@
         <h1>Global</h1>
         <ul>
             <li><a href="">Dashboard</a></li>
-            <li>Global</li>
+        <li>Global</li>
         </ul>
-        <span class="export" (click)="exportToPDF()"><i class="i-Add mr-2"></i>Export</span>
+
+    
+    <button class="export icon-button ">
+        <span class="bntExportCsv" (click)="generatePDF()"><i class="i-Download mr-2"></i>Export pdf</span>
+      </button>
         
     </div>
 
     <div class="separator-breadcrumb border-top"></div>
 
+    <!-- 
     <button class="export-button" (click)="generatePDF()">PDF</button>
-
+-->
    
         <!-- Tu contenido actual del dashboard -->
       
@@ -48,14 +53,14 @@
 
         
         <div class="rowColumna col-lg-3 col-sm-12 ">
-            <div class="card mb-4 w-full center-chart">
+            <div class="card mb-4 center-chart">
                 <div class="card-body">
                     <div class="card-title">Violation type</div>
                     <app-doughnut-charts></app-doughnut-charts>
                 </div>
             </div>
 
-            <div class="card mb-4 w-full center-chart">
+            <div class="card mb-4 center-chart">
                 <div class="card-body">
                     <div class="card-title">Violation source</div>
                     <app-polar-area-chart></app-polar-area-chart>

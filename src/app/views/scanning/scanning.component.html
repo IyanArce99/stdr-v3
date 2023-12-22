@@ -22,7 +22,8 @@
                     <th scope="col">Repository</th>
                     <th scope="col">Date</th>
                     <th scope="col">Status</th>
-                  </tr>
+                    <th scope="col">Actions</th>
+                                      </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let el of monitoringMock">
@@ -31,7 +32,12 @@
                     <td>{{el.repository}}</td>
                     <td>{{el.entropy}}</td>
                     <td>{{el.hash}}</td>
-                  </tr>
+                    <td>
+                    <button (click)="descargarArchivo()" class="icon-button">
+                      <i class="i-Download" style="color: #9B2727;"></i>
+                    </button>
+                  </td>
+                                      </tr>
                 </tbody>
               </table>
           </div>

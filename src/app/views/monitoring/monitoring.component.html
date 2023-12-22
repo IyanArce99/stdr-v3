@@ -7,7 +7,14 @@
         <li class="add"(click)="confirm(modalConfirm)"><i class="i-Add">Add</i></li>
 
       </ul>
-      <span class="export" (click)="exportToPDF()"><i class="i-Add mr-2"></i>Export</span>
+      <div class="export-buttons">
+        <span class="export" (click)="exportToPDF()"><i class="i-Add mr-2"></i>Export</span>
+        <button class="icon-button ">
+        <span class="bntExportCsv" (click)="modalActive(modalExportarCsv)"><i class="i-Download mr-2"></i>Export csv</span>
+      </button>
+      </div>
+      
+    
     </div>
   
     <div class="separator-breadcrumb border-top"></div>
@@ -24,6 +31,10 @@
                     <th scope="col">Platform</th>
                     <th scope="col">Repository</th>
                     <th scope="col">File</th>
+                    <th scope="col">Route</th>
+                    <th scope="col">Status</th>
+
+                    <th scope="col"  (click)="sort('date')"><img src="assets/images/sorting.png" alt="Filtro">Active since</th>
                     <th scope="col">Actions</th>
                   </tr>
                 </thead>
@@ -34,14 +45,23 @@
                     <td>{{el.entity}}</td>
                     <td>{{el.platform}}</td>
                     <td>{{el.repository}}</td>
+                    <td>{{el.file}}</td>
                     <td>{{el.ruta}}</td>
-                    <td class="fs-3"><i class="i-Warning-Window mr-2"></i> <i class="i-Email"></i></td>
+                    <td>{{el.status}}</td>
+                    <td style="padding-left: 20px;">{{ el.date | date: 'dd/MM/yyyy' }}</td>
+                    <td class="fs-3"><i class="i-Warning-Window mr-2"></i>
+                      <button class="icon-button" (click)="mostrarMensaje()">
+                        <i class="i-Email mr-2" ></i> <!-- Icono de mensaje -->
+                      </button>
+                  
+                  </td>
                   </tr>
                 </tbody>
               </table>
           </div>
       </div>
     </div>
+
 </div>  
 <ng-template #modalConfirm let-modal>
   <div class="modal-header">
@@ -81,3 +101,44 @@
     <button type="button" ngbAutofocus class="btn btn-danger btn-rounded" (click)="modal.close('Ok')">Ok</button>
   </div>
 </ng-template>
+
+
+
+<ng-template #modalExportarCsv let-modal>
+    <div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Exportar CSV</h4>
+    <button type="button" aria-label="Close button" class="close btn" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+      <span  aria-hidden="true" style="font-size: 20px;">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+   
+    <label class="radio radio-primary">
+                    <input type="radio" name="radio" [value]="1" formControlName="radio" checked>
+                    <span class="modalText">Activos</span>
+                    <span class="checkmark"></span>
+    </label>
+    <label class="radio radio-secondary">
+                    <input type="radio" name="radio" [value]="2" formControlName="radio">
+                    <span class="modalText">Falsos Positivos </span>
+                    <span class="checkmark"></span>
+   </label>
+
+   <label class="radio radio-secondary">
+    <input type="radio" name="radio" [value]="3" formControlName="radio">
+    <span class="modalText">Resueltos</span>
+    <span class="checkmark"></span>
+</label>
+
+    
+  </div>
+  <div class="modal-footer">
+    <button class="modalText" type="button" class="btn btn-outline-secondary btn-rounded" (click)="modal.dismiss('cancel')">Cancelar</button>
+    <button class="modalText" type="button" ngbAutofocus class="btn btn-danger btn-rounded" (click)="generarCSV()">Exportar</button>
+  </div>
+  </div>
+</ng-template>
+
+

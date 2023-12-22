@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/shared/services/product.service';
+import { NgbModal , NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-fullscreen-table',
@@ -8,11 +9,26 @@ import { ProductService } from 'src/app/shared/services/product.service';
 })
 export class FullscreenTableComponent implements OnInit {
   products$;
+  confirmResut;
+
 
   constructor(
-    private productService: ProductService
+    private productService: ProductService,
+    private modalService: NgbModal
   ) { }
 
+
+  ;
+
+
+  confirm(content) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', centered: true })
+    .result.then((result) => {
+      this.confirmResut = `Closed with: ${result}`;
+    }, (reason) => {
+      this.confirmResut = `Dismissed with: ${reason}`;
+    });
+  }
   ngOnInit() {
     this.products$ = this.productService.getProducts();
   }

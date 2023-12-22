@@ -2,7 +2,25 @@
     margin-right: 10px;
 }
 
-.export {
+.export-buttons {
     position: absolute;
     right: 35px;
+  }
+  
+  .export, .bntExportCsv {
+    margin-left: 10px; /* Espacio entre los dos elementos */
+  }
+  
+
+  .modalText{
+    font-size: 16px;
+  }
+
+
+.icon-button {
+  border: none;       
+  background: none;  
+  padding: 0;         
+  cursor: pointer;  
+  color: #9B2727; 
 }
